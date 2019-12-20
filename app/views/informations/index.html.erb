@@ -45,4 +45,42 @@ function initMap(){
   //複数マーカー ここまで  
 }
 </script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-6 building-info">
+      <span class="box-title">地震範囲に含まれる建築物</span>
+      <p>建築物A　クリックすると詳細ページに移動</p>
+      <p>建築物B　クリックすると詳細ページに移動</p>
+      <p>建築物C　クリックすると詳細ページに移動</p>
+      <p>建築物D　クリックすると詳細ページに移動</p>
+      <p>建築物E　クリックすると詳細ページに移動</p>
+      <p>建築物F　クリックすると詳細ページに移動</p>
+    </div>  
+    <div class="col-md-12 col-lg-6 building-info">
+      <span class="box-title">全ての建築物<i class="fas fa-external-link-alt ml-2"></i></span>
+      <h5>北海道</h5>
+      <p>建築物A　クリックすると詳細ページに移動</p>
+      <h5>青森</h5>
+      <p>建築物B　クリックすると詳細ページに移動</p>
+      <h5>岩手</h5>
+      <p>建築物C　クリックすると詳細ページに移動</p>
+      <h5>秋田</h5>
+      <p>建築物D　クリックすると詳細ページに移動</p>
+      <h5>山形</h5>
+      <p>建築物E　クリックすると詳細ページに移動</p>
+    </div>  
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GMAPS_KEY']  %>&callback=initMap" async defer></script>
