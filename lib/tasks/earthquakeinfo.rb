@@ -31,7 +31,7 @@ json.each { |record|
     @information.disastertime = disastertime
     @information.tsunami = record.fetch("earthquake").fetch("domesticTsunami")
     
- #   unless @information.location == lastinfo.location && @information.scale == lastinfo.scale && @information.latitude == lastinfo.latitude && @information.longitude == lastinfo.longitude && @information.disastertime == lastinfo.disastertime && @information.tsunami == lastinfo.tsunami
+    unless @information.location == lastinfo.location && @information.scale == lastinfo.scale && @information.latitude == lastinfo.latitude && @information.longitude == lastinfo.longitude && @information.disastertime == lastinfo.disastertime && @information.tsunami == lastinfo.tsunami
       @information.save
 
       if record.fetch("earthquake").fetch("maxScale") > 30
@@ -49,9 +49,9 @@ json.each { |record|
         response = client.push_message(user_id, message)
       end
       
-#    end
+    end
     
-#    break
+    break
     
   end
 
