@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191219180339) do
+ActiveRecord::Schema.define(version: 20191220062532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "information", force: :cascade do |t|
     t.string "location"
-    t.string "scale"
+    t.integer "scale"
     t.float "latitude"
     t.float "longitude"
     t.string "address"
