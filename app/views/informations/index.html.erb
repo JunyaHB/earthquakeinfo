@@ -3,11 +3,13 @@
 <div class="container today-info">
   <span class="box-title">地震情報</span>
   <% @informations.each do |information| %>
-    <% if earthquakewarning(information.scale) %>
-      <p class="warning"><%= information.disastertime %>&nbsp;&nbsp;&nbsp;&nbsp;<%= information.location %>で地震が発生しました!&nbsp;&nbsp;&nbsp;&nbsp;<%= earthquakescale(information.scale) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= tsunamiscale(information.tsunami)  %></p>
-    <% else  %>
-      <p><%= information.disastertime %>&nbsp;&nbsp;&nbsp;&nbsp;<%= information.location %>で地震が発生しました!&nbsp;&nbsp;&nbsp;&nbsp;<%= earthquakescale(information.scale) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= tsunamiscale(information.tsunami) %></p>
-    <% end  %>
+    <% if information.created_at %>  
+      <% if earthquakewarning(information.scale) %>
+        <p class="warning"><%= information.disastertime %>&nbsp;&nbsp;&nbsp;&nbsp;<%= information.location %>で地震が発生しました!&nbsp;&nbsp;&nbsp;&nbsp;<%= earthquakescale(information.scale) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= tsunamiscale(information.tsunami)  %></p>
+      <% else  %>
+        <p><%= information.disastertime %>&nbsp;&nbsp;&nbsp;&nbsp;<%= information.location %>で地震が発生しました!&nbsp;&nbsp;&nbsp;&nbsp;<%= earthquakescale(information.scale) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= tsunamiscale(information.tsunami) %></p>
+      <% end  %>
+    <% end %>
   <% end %>
     
 </div>
