@@ -1,5 +1,35 @@
 @import "bootstrap";
 
+/** 地震情報掲示板の編集 **/
+.warning {
+    background: linear-gradient(transparent 0%, #FFBEDA	0%);
+}
+
+.today-info {
+    position: relative;
+    margin: 2em auto;
+    padding: 30px 50px;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+}
+.today-info .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #95ccff;
+    font-weight: bold;
+}
+.today-info p {
+    margin: 0; 
+    padding: 0;
+}
+
+/** グーグルマップの編集  **/
 #map{
   height: 600px;
 }
